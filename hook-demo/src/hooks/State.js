@@ -25,7 +25,7 @@ import React, {Component, useState} from 'react'
     }
 } */
 
-/* function State(){
+function State(){
     const [name, setName] = useState("gqf");
     const [age, setAge] = useState(27) 
     return (
@@ -38,9 +38,9 @@ import React, {Component, useState} from 'react'
             }}>长大</button></p>
         </div>
     )
-} */
+}
 
-function State(){
+/* function State(){
     const [state, setState] = useState({
         name: "gqf",
         age: 27
@@ -59,6 +59,6 @@ function State(){
             }}>长大</button></p>
         </div>
     )
-}
+} */
 
 export default State;
