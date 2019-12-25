@@ -53,8 +53,8 @@ function State(){
             <p>年龄 - {age}</p>
             <p><button onClick={() => {
                 setState({
-                    ...state,
-                    age: ++age
+                    // ...state,
+                    age: ++age,
                 })
             }}>长大</button></p>
         </div>
