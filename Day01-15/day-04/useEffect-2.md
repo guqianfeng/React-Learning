@@ -109,7 +109,7 @@
         function scrollFn(){
             // console.log(window.scrollY);
             let y = window.scrollY;
-            let inputEle = document.getElementById("inputEle");
+            let inputEle = document.getElementById("inputEle"); //这里先用low的方式，后面会讲到ref
             // console.log(inputEle, y);
             inputEle.style.transform = `translateY(${y}px)`;
         }
@@ -121,7 +121,7 @@
             }, [])
             return (
                 <input 
-                    id="inputEle"
+                    id="inputEle" //这里先用low的方式，后面会讲到ref
                     type="text" 
                     value={msg} 
                     onChange={e => {
@@ -141,6 +141,7 @@
                 // console.log("挂载的时候搞事情");
                 window.addEventListener("scroll", scrollFn);
                 return () => {
+                    // console.log("卸载的时候搞事情")
                     window.removeEventListener("scroll", scrollFn);
                 }
             }, [])
