@@ -74,12 +74,8 @@ import React, {Component, useState, useEffect} from 'react'
     }
 } */
 
+
 function Txt({msg, setEdit}){
-    useEffect(() => {
-        return () => {
-            console.log("组件要卸载了")
-        }
-    })
     return (
         <p>
             <span>{msg}</span>
@@ -90,12 +86,40 @@ function Txt({msg, setEdit}){
     )
 }
 
+function scrollFn(){
+    // console.log(window.scrollY);
+    let y = window.scrollY;
+    let inputEle = document.getElementById("inputEle");
+    // console.log(inputEle, y);
+    inputEle.style.transform = `translateY(${y}px)`;
+}
+
+function Edit({msg, setMsg, setEdit}){
+    useEffect(() => {
+        // console.log("挂载的时候搞事情");
+        window.addEventListener("scroll", scrollFn);
+        return () => {
+            window.removeEventListener("scroll", scrollFn);
+        }
+    }, [])
+    return (
+        <input 
+            id="inputEle"
+            type="text" 
+            value={msg} 
+            onChange={e => {
+                setMsg(e.target.value)
+            }} 
+            onBlur={()=>{
+                setEdit(false)
+            }}
+        />
+    )
+}
+
 function Effect(){
     const [edit, setEdit] = useState(false);
     const [msg, setMsg] = useState("这个是测试用的msg");
-    useEffect(() => {
-        console.log("状态有改变");
-    })
     return (
         <div>
             <h1>useEffect</h1>
@@ -106,18 +130,10 @@ function Effect(){
                 )
                 :
                 (
-                    <input 
-                        type="text" 
-                        value={msg} 
-                        onChange={e => {
-                            setMsg(e.target.value)
-                        }} 
-                        onBlur={()=>{
-                            setEdit(false)
-                        }}
-                    />
+                    <Edit msg={msg} setMsg={setMsg} setEdit={setEdit}/>                    
                 )
             } 
+            {[...".".repeat(100)].map((item,index) => <p key={index}>这个是填充页面的啦</p>)}
         </div>
     )
 }
