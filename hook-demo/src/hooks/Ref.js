@@ -89,11 +89,11 @@ function Txt({msg, setEdit}){
 
 function Edit({msg, setMsg, setEdit}){
     let el = useRef(null);
+    function scrollFn(){
+        let y = window.scrollY;
+        el.current.style.transform = `translateY(${y}px)`; //这行代码改动了使用了el.current
+    }
     useEffect(() => {
-        function scrollFn(){
-            let y = window.scrollY;
-            el.current.style.transform = `translateY(${y}px)`; //这行代码改动了使用了el.current
-        }
         el.current.select(); //优化，加载的时候选中
         window.addEventListener("scroll", scrollFn);
         return () => {
