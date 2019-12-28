@@ -115,7 +115,7 @@ function Edit({msg, setMsg, setEdit}){
     )
 }
 
-function Ref(){
+/* function Ref(){
     const [edit, setEdit] = useState(false);
     const [msg, setMsg] = useState("这个是测试用的msg");
     return (
@@ -132,6 +132,24 @@ function Ref(){
                 )
             } 
             {[...".".repeat(100)].map((item,index) => <p key={index}>这个是填充页面的啦</p>)}
+        </div>
+    )
+} */
+
+function Ref(){
+    let [number, setNumber] = useState(0);
+    let prev = useRef(number);
+    useEffect(() => {
+        prev.current = number;
+    })
+    return (
+        <div>
+            <h1>useRef-2 ---- 另外的作用</h1>
+            <p>当前值是 - {number}</p>
+            <p>上一个值是 - {prev.current}</p>
+            <button onClick={() => {
+                setNumber(number + 1)
+            }}>~点击我啊~</button>
         </div>
     )
 }
