@@ -15,11 +15,22 @@ export default () => {
             completed: false,
         }])
     }
-    console.log(todos);
+    // console.log(todos);
+    function changeCompleted(id, completed){
+        todos.forEach(item => {
+            if(item.id == id){
+                item.completed = completed;
+            }
+        })
+        setTodos([...todos]);
+    }
+    function deleteTodo(id){
+        setTodos(todos.filter(item => item.id != id))
+    }
     return (
         <div id="todoapp">
             <Header addTodo={addTodo}/>
-            <Main />
+            <Main todos={todos} changeCompleted={changeCompleted} deleteTodo={deleteTodo}/>
             <Footer />
         </div>
     )
