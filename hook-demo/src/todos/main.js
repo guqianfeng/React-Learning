@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
-function Li({inner, changeCompleted, deleteTodo}){
+function Li({inner, changeCompleted, deleteTodo, editVal}){
+    const [edit, setEdit] = useState(false)
+    const editEl = useRef(null);
+    useEffect(() => {
+        if(edit){
+            editEl.current.select();
+        }else{
+            if(!editEl.current.value.trim()){
+                setEdit(true)
+            }
+        }
+    }, [edit])
     return (
         <li className={inner.completed ? "done" : ""}>
-            <div className="view" >
+            <div className="view" style={{display: edit? "none" : "block"}}>
                 <input 
                     className="toggle" 
                     type="checkbox" 
@@ -12,7 +23,9 @@ function Li({inner, changeCompleted, deleteTodo}){
                         changeCompleted(inner.id, e.target.checked)
                     }}
                 />
-                <label>{inner.val}</label>
+                <label onDoubleClick={() => {
+                    setEdit(true);
+                }}>{inner.val}</label>
                 <a className="destroy" onClick={()=>{
                     deleteTodo(inner.id)
                 }}></a>
@@ -20,12 +33,20 @@ function Li({inner, changeCompleted, deleteTodo}){
             <input className="edit" 
                 type="text" 
                 value={inner.val} 
+                style={{display: edit? "block" : "none"}}
+                onBlur={() => {
+                    setEdit(false);
+                }}
+                ref={editEl}
+                onChange={(e) => {
+                    editVal(inner.id, e.target.value)
+                }}
             />
         </li>        
     )
 }
 
-export default ({todos, changeCompleted, deleteTodo}) => {
+export default ({todos, changeCompleted, deleteTodo, editVal}) => {
     return (
         <section id="main" style={{display: todos.length ? "block" : "none"}}>
             <input id="toggle-all" type="checkbox" checked="" />
@@ -37,6 +58,7 @@ export default ({todos, changeCompleted, deleteTodo}) => {
                                 inner = {item}
                                 changeCompleted = {changeCompleted}
                                 deleteTodo = {deleteTodo}
+                                editVal = {editVal}
                             />
                 })}
             </ul>

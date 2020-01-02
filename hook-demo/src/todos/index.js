@@ -27,10 +27,18 @@ export default () => {
     function deleteTodo(id){
         setTodos(todos.filter(item => item.id != id))
     }
+    function editVal(id, val){
+        todos.forEach(item => {
+            if(item.id == id){
+                item.val = val;
+            }
+        })
+        setTodos([...todos]);
+    }
     return (
         <div id="todoapp">
             <Header addTodo={addTodo}/>
-            <Main todos={todos} changeCompleted={changeCompleted} deleteTodo={deleteTodo}/>
+            <Main todos={todos} changeCompleted={changeCompleted} deleteTodo={deleteTodo} editVal={editVal}/>
             <Footer />
         </div>
     )
