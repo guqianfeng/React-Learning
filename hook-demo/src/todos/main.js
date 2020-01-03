@@ -46,10 +46,18 @@ function Li({inner, changeCompleted, deleteTodo, editVal}){
     )
 }
 
-export default ({todos, changeCompleted, deleteTodo, editVal}) => {
+export default ({todos, changeCompleted, deleteTodo, editVal, changeAllCompleted}) => {
+    let completedTodos = todos.filter(item => item.completed);
     return (
         <section id="main" style={{display: todos.length ? "block" : "none"}}>
-            <input id="toggle-all" type="checkbox" checked="" />
+            <input 
+                id="toggle-all" 
+                type="checkbox" 
+                checked={completedTodos.length === todos.length} 
+                onChange={(e) => {
+                    changeAllCompleted(e.target.checked);
+                }}
+            />
             <label htmlFor="toggle-all">Mark all as complete</label>
             <ul id="todo-list">
                 {todos.map(item => {

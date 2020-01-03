@@ -1,10 +1,19 @@
 import React from 'react'
 
-export default () => {
+export default ({todos, removeCompleted}) => {
+    let completedTodos = todos.filter(item => item.completed);
+    let unCompletedTodos = todos.filter(item => !item.completed);
     return (
-        <footer>
-            <a id="clear-completed">Clear 0 completed item</a>
-            <div id="todo-count">10 items left</div>
+        <footer style={{display: todos.length? "block" : "none"}}>
+            <a  id="clear-completed" 
+                style={{display: completedTodos.length? "block" : "none"}}
+                onClick={() => {
+                    removeCompleted();
+                }}
+            >
+                Clear {completedTodos.length} completed item
+            </a>
+            <div id="todo-count">{unCompletedTodos.length} items left</div>
         </footer>
     )
 }

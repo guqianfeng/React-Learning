@@ -35,11 +35,25 @@ export default () => {
         })
         setTodos([...todos]);
     }
+    function removeCompleted(){
+        setTodos(todos.filter(item => !item.completed))
+    }
+
+    function changeAllCompleted(completed){
+        todos.forEach(item => {item.completed = completed})
+        setTodos([...todos]);
+    }
     return (
         <div id="todoapp">
             <Header addTodo={addTodo}/>
-            <Main todos={todos} changeCompleted={changeCompleted} deleteTodo={deleteTodo} editVal={editVal}/>
-            <Footer />
+            <Main 
+                todos={todos} 
+                changeCompleted={changeCompleted} 
+                deleteTodo={deleteTodo} 
+                editVal={editVal} 
+                changeAllCompleted={changeAllCompleted}
+            />
+            <Footer todos={todos} removeCompleted={removeCompleted}/>
         </div>
     )
 }
