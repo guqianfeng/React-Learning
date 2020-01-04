@@ -3,7 +3,8 @@ import React from 'react';
 // import State from './hooks/State'
 // import Effect from './hooks/Effect'
 // import Ref from './hooks/Ref'
-import Todos from './todos/index'
+// import Todos from './todos/index'
+import Memo from './hooks/Memo'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <State/> */}
       {/* <Effect/> */}
       {/* <Ref/> */}
-      <Todos/>
+      {/* <Todos/> */}
+      <Memo/>
     </div>
   );
 }
