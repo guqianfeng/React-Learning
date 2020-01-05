@@ -6,7 +6,8 @@ import React from 'react';
 // import Todos from './todos/index'
 // import Memo from './hooks/Memo'
 // import Callback from './hooks/Callback'
-import Context from './hooks/Context'
+// import Context from './hooks/Context'
+import Reducer from './hooks/Reducer'
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <Todos/> */}
       {/* <Memo/> */}
       {/* <Callback /> */}
-      <Context />
+      {/* <Context /> */}
+      <Reducer/>
     </div>
   );
 }
