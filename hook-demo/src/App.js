@@ -5,7 +5,8 @@ import React from 'react';
 // import Ref from './hooks/Ref'
 // import Todos from './todos/index'
 // import Memo from './hooks/Memo'
-import Callback from './hooks/Callback'
+// import Callback from './hooks/Callback'
+import Context from './hooks/Context'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <Ref/> */}
       {/* <Todos/> */}
       {/* <Memo/> */}
-      <Callback />
+      {/* <Callback /> */}
+      <Context />
     </div>
   );
 }
