@@ -32,4 +32,8 @@
     * [day-14-useContext-1](./Day01-15/day-14/useContext-1.md)
     * [day-15-useContext-2](./Day01-15/day-15/useContext-2.md)
 
+* Day16-30   
+
+    * [day-16-useReducer](./Day16-30/day-16/useReducer.md)
+
       
