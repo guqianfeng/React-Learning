@@ -7,7 +7,8 @@ import React from 'react';
 // import Memo from './hooks/Memo'
 // import Callback from './hooks/Callback'
 // import Context from './hooks/Context'
-import Reducer from './hooks/Reducer'
+// import Reducer from './hooks/Reducer'
+import Hook from './hooks/Hook'
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <Memo/> */}
       {/* <Callback /> */}
       {/* <Context /> */}
-      <Reducer/>
+      {/* <Reducer/> */}
+      <Hook/>
     </div>
   );
 }
