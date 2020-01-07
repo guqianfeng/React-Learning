@@ -37,5 +37,6 @@
     * [day-16-useReducer](./Day16-30/day-16/useReducer.md)
     * [day-17-自定义hook](./Day16-30/day-17/自定义hook.md)
     * [day-18-项目构建](./Day16-30/day-18/项目构建.md)
+    * [day-19-路由管理](./Day16-30/day-19/路由管理.md)
 
       
