@@ -12,6 +12,11 @@
 3. Redux的使用
 4. 移动端事件的基础知识(实战做一个移动端的项目)
 
+> 浏览器插件
+
+* React Developer Tools
+* redux-DevTools
+
 > 目录
 
 * Day01-15
