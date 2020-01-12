@@ -30,9 +30,9 @@
   position: relative;
   transition: .5s;
 }
-.login_register_box .box:hover {
+/* .login_register_box .box:hover {
   transform: rotateY(-180deg);
-}
+} */
 .login_register_box .login_box,
 .login_register_box .register_box {
   position: absolute;

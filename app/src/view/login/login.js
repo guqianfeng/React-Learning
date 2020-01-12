@@ -1,10 +1,24 @@
 import React, {useState} from 'react'
-export default function LoginBox(props){
+
+import {connect} from 'react-redux'
+
+import login from '../../store/action/login'
+
+function LoginBox(props){
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
     const [vcode, setVcode] = useState("");
     const [vcodeShow, setVcodeShow] = useState(false);
     const [vcodeSrc, setVcodeSrc] = useState("/miaov/user/verify?" + Date.now());
+
+    function toLogin(){
+        props.dispatch(login({
+            verify: vcode, 
+            username: user,
+            password
+        }))
+    }
+
     return (
         <div className="login_box">
             <figure className="user_img">
@@ -50,14 +64,19 @@ export default function LoginBox(props){
                         <img 
                             src={vcodeSrc}
                             className="verify"
+                            onClick={e => {
+                                setVcodeSrc("/miaov/user/verify?" + Date.now())
+                            }}
                         />
                         :
                         ""
                     }
                 </p>
-                <button className="form_btn">登录</button>
+                <button className="form_btn" onClick={toLogin}>登录</button>
                 <p className="form_tip">没有帐号？<a href="#">立即注册</a></p>
             </div>
         </div>        
     )
 }
+
+export default connect(res => res)(LoginBox);
