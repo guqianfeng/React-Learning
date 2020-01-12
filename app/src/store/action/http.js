@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import qs from 'qs' 
 
-const http = axios.create({
+const HTTP = axios.create({
     baseURL: "/miaov", //以miaov开始的就做代理转发
     withCredentials: true,
     transformRequest: (data) => {
@@ -10,4 +10,4 @@ const http = axios.create({
     }
 })
 
-export default http;
+export default HTTP;

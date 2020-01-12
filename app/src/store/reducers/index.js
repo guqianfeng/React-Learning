@@ -1,8 +1,10 @@
-export default (state = {}, action) => {
-    switch(action.type){
-        case "":
-           return ""  
-        default: 
-            return state;
-    }
+import getUser from './login'
+
+function Index(state = {}, action){
+    return state;
+}
+
+export default {
+    Index,
+    getUser,
 }
