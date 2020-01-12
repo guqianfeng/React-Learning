@@ -1,58 +1,58 @@
-ÓòÃûµØÖ·£ºhttps://data.miaov.com/
+åŸŸååœ°å€ï¼šhttps://data.miaov.com/
 
-1)ÊÇ·ñµÇÂ¼
+1)æ˜¯å¦ç™»å½•
 	/user/islogin
-POST£º
-·µ»ØÖµ£º
-	code:0 ÒÑ¾­µÇÂ½
-	code:1 Î´µÇÂ½
-2)×¢²á£º
+POSTï¼š
+è¿”å›å€¼ï¼š
+	code:0 å·²ç»ç™»é™†
+	code:1 æœªç™»é™†
+2)æ³¨å†Œï¼š
 	/user/register
-POST£º
-	verify:ÑéÖ¤Âë
-	username:ÓÃ»§Ãû
-	password:ÃÜÂë
-	repassword:È·ÈÏÃÜÂë
-·µ»ØÖµ£º
-	code:0 msg:×¢²á³É¹¦
-	code:1 msg:ÑéÖ¤Âë´íÎó
-	code:2 msg:ÃÜÂëºÍÖØ¸´ÃÜÂë²»Ò»ÖÂ£¡
-	code:3(×¢²áÊ§°Ü) msg:»áÌáÊ¾Äã²»Í¬µÄ×¢²áÊ§°ÜÔ­Òò
-	code:4 msg:×¢²áÒÑ¹Ø±Õ(ºóÌ¨¿É¿ØÖÆ)
-3)µÇÂ½£º
+POSTï¼š
+	verify:éªŒè¯ç 
+	username:ç”¨æˆ·å
+	password:å¯†ç 
+	repassword:ç¡®è®¤å¯†ç 
+è¿”å›å€¼ï¼š
+	code:0 msg:æ³¨å†ŒæˆåŠŸ
+	code:1 msg:éªŒè¯ç é”™è¯¯
+	code:2 msg:å¯†ç å’Œé‡å¤å¯†ç ä¸ä¸€è‡´ï¼
+	code:3(æ³¨å†Œå¤±è´¥) msg:ä¼šæç¤ºä½ ä¸åŒçš„æ³¨å†Œå¤±è´¥åŸå› 
+	code:4 msg:æ³¨å†Œå·²å…³é—­(åå°å¯æ§åˆ¶)
+3)ç™»é™†ï¼š
 	/user/login
-POST£º
-	verify:ÑéÖ¤Âë
-	username:ÓÃ»§Ãû
-	password:ÃÜÂë
-·µ»ØÖµ£º
-	code:0 msg:µÇÂ½³É¹¦
-	code:1 msg:ÑéÖ¤Âë´íÎó
-	code:2(µÇÂ½Ê§°Ü) msg:»áÌáÊ¾Äã²»Í¬µÄ×¢²áÊ§°ÜÔ­Òò
+POSTï¼š
+	verify:éªŒè¯ç 
+	username:ç”¨æˆ·å
+	password:å¯†ç 
+è¿”å›å€¼ï¼š
+	code:0 msg:ç™»é™†æˆåŠŸ
+	code:1 msg:éªŒè¯ç é”™è¯¯
+	code:2(ç™»é™†å¤±è´¥) msg:ä¼šæç¤ºä½ ä¸åŒçš„æ³¨å†Œå¤±è´¥åŸå› 
 
 
-4)ÍË³öµÇÂ½£º
+4)é€€å‡ºç™»é™†ï¼š
 	/user/logout
-POST£º
+POSTï¼š
 
-·µ»ØÖµ£º
+è¿”å›å€¼ï¼š
 
-//Í³Ò»
-page£ºÒ³Âë
-rows£ºÌõÊı
+//ç»Ÿä¸€
+pageï¼šé¡µç 
+rowsï¼šæ¡æ•°
 
-5)Ê×Ò³ÄÚÈİ£º
+5)é¦–é¡µå†…å®¹ï¼š
 	/lecturer/lists?page=1&rows=20
 
-²ÎÊıËµÃ÷:
-POST£º
-	order:desc(½µĞò)/asc(ÉıĞò) Ä¬ÈÏ£ºdesc
-	sort:sort(ºóÌ¨¿ÉÒÔÖ¸¶¨ÅÅĞò)/id(¼ÓÈëµÄID)/update_time(ĞŞ¸ÄÊ±¼ä) Ä¬ÈÏ£º°´ÕÕ·¢²¼ÎÄÕÂµÄĞŞ¸ÄÊ±¼äupdate_time  desc ½µĞò
-	category_id: 1»ò2  1±íÊ¾½²Ê¦×÷Æ·   2±íÊ¾½²Ê¦ÁĞ±í
-	recommend: ÍÆ¼öÎ»ÖÃ  Èç¹û»ñÈ¡½²Ê¦×÷Æ· Ê×Ò³Õ¹Ê¾µÄ ÔòÖµÎª 1 £¨Èç¹ûÑ¡ÔñÈ«²¿µÄÔòÊÇ0£©
+å‚æ•°è¯´æ˜:
+POSTï¼š
+	order:desc(é™åº)/asc(å‡åº) é»˜è®¤ï¼šdesc
+	sort:sort(åå°å¯ä»¥æŒ‡å®šæ’åº)/id(åŠ å…¥çš„ID)/update_time(ä¿®æ”¹æ—¶é—´) é»˜è®¤ï¼šæŒ‰ç…§å‘å¸ƒæ–‡ç« çš„ä¿®æ”¹æ—¶é—´update_time  desc é™åº
+	category_id: 1æˆ–2  1è¡¨ç¤ºè®²å¸ˆä½œå“   2è¡¨ç¤ºè®²å¸ˆåˆ—è¡¨
+	recommend: æ¨èä½ç½®  å¦‚æœè·å–è®²å¸ˆä½œå“ é¦–é¡µå±•ç¤ºçš„ åˆ™å€¼ä¸º 1 ï¼ˆå¦‚æœé€‰æ‹©å…¨éƒ¨çš„åˆ™æ˜¯0ï¼‰
 
 
-Ê×Ò³»ñÈ¡µÄÊı¾İ´«µİÄÚÈİÊÇ
+é¦–é¡µè·å–çš„æ•°æ®ä¼ é€’å†…å®¹æ˜¯
 	order=desc 
 	sort=id
 	category_id=1
@@ -62,97 +62,97 @@ POST£º
 
 
 
-6)½²Ê¦£º
+6)è®²å¸ˆï¼š
 
-½²Ê¦ÁĞ±í(·µ»ØÈ«²¿) ËûºÍ 1) ½Ó¿ÚÊ¹ÓÃÍ¬Ò»¸ö 
+è®²å¸ˆåˆ—è¡¨(è¿”å›å…¨éƒ¨) ä»–å’Œ 1) æ¥å£ä½¿ç”¨åŒä¸€ä¸ª 
 /lecturer/lists?page=1&rows=100
 
 
-POST£º
-	order:desc(½µĞò)/asc(ÉıĞò) Ä¬ÈÏ£ºdesc
-	sort:sort(ºóÌ¨¿ÉÒÔÖ¸¶¨ÅÅĞò)/id(¼ÓÈëµÄID)/update_time(ĞŞ¸ÄÊ±¼ä) Ä¬ÈÏ£º°´ÕÕ·¢²¼ÎÄÕÂµÄĞŞ¸ÄÊ±¼äupdate_time  desc ½µĞò
-	category_id=2  ¹Ì¶¨Öµ
-	recommend£º 0»òÕß²»´«
-	·µ»ØÖµºÍ 1£© Ò»Ñù
+POSTï¼š
+	order:desc(é™åº)/asc(å‡åº) é»˜è®¤ï¼šdesc
+	sort:sort(åå°å¯ä»¥æŒ‡å®šæ’åº)/id(åŠ å…¥çš„ID)/update_time(ä¿®æ”¹æ—¶é—´) é»˜è®¤ï¼šæŒ‰ç…§å‘å¸ƒæ–‡ç« çš„ä¿®æ”¹æ—¶é—´update_time  desc é™åº
+	category_id=2  å›ºå®šå€¼
+	recommendï¼š 0æˆ–è€…ä¸ä¼ 
+	è¿”å›å€¼å’Œ 1ï¼‰ ä¸€æ ·
 
 
-7)ÏêÇéÒ³:
+7)è¯¦æƒ…é¡µ:
 	/lecturer/info
-POST£º
-	article_id : ÎÄÕÂµÄid ¾ÍÊÇÁĞ±íÀïµÄid
+POSTï¼š
+	article_id : æ–‡ç« çš„id å°±æ˜¯åˆ—è¡¨é‡Œçš„id
 
-·µ»Ø½á¹û
+è¿”å›ç»“æœ
 {"id":"1","title":"\u6211\u662f\u7b2c\u4e00\u4e2a\u6587\u7ae0\u6807\u98981","category_id":"2","content":"\u7b2c\u4e03\u4f4d\u8f7b\u5fae\u8f7b\u5fae\u8f7b\u5fae\u8bf7\u95ee\u8bf7\u95ee\u8bf7\u95ee\u53bb","recommend":"0","message":"0","good":"0","view":"0","author":"","sort":"0","status":"0","create_time":"2018-05-21 20:38:01","update_time":"2018-05-23 16:03:47","image_path":[{"id":"1","article_id":"22","path":"\/Uploads\/article\/2018\/05\/23\/4a9dab6be201eed8b83817634c4e29fa.png","sort":"1","create_time":"2018-05-23 18:20:27"},{"id":"2","article_id":"22","path":"\/Uploads\/article\/2018\/05\/23\/1d2f45aa6db9c0812e7fb6ca07832979.png"}
 
 
 
-8)ÏêÇéÒ³ÁôÑÔÁĞ±í:			
+8)è¯¦æƒ…é¡µç•™è¨€åˆ—è¡¨:			
 	/lecturer/getcomment?page=1&rows=20
-POST£º
-	article_id : ÎÄÕÂµÄid ¾ÍÊÇÁĞ±íÀïµÄid
+POSTï¼š
+	article_id : æ–‡ç« çš„id å°±æ˜¯åˆ—è¡¨é‡Œçš„id
 
-·µ»ØÖµ:
+è¿”å›å€¼:
 	[{"content":"qweqeqweqew","create_time":"2015-10-00 00:00:00","username":"motao"}]
 
 
 
-9)ÆÀÂÛ½Ó¿Ú
+9)è¯„è®ºæ¥å£
 /lecturer/addcomment
-POST²ÎÊı:
-	article_id:ÎÄÕÂid
-	content:ÆÀÂÛÄÚÈİ
-·µ»ØÖµ
+POSTå‚æ•°:
+	article_id:æ–‡ç« id
+	content:è¯„è®ºå†…å®¹
+è¿”å›å€¼
 	{"code":0,"msg":"\u8bc4\u8bba\u6210\u529f"}
-	code:0 msg:ÆÀÂÛ³É¹¦
-	code:1 msg:Î´µÇÂ¼
-	code:2 msg:ÎÄÕÂid²»ÄÜÎª¿Õ
-	code:3 msg:ÆÀÂÛÊ§°Ü
+	code:0 msg:è¯„è®ºæˆåŠŸ
+	code:1 msg:æœªç™»å½•
+	code:2 msg:æ–‡ç« idä¸èƒ½ä¸ºç©º
+	code:3 msg:è¯„è®ºå¤±è´¥
 
 
 
-10)ÊÇ·ñµãÔŞ½Ó¿Ú
+10)æ˜¯å¦ç‚¹èµæ¥å£
 	/lecturer/getgood?
 
-POST²ÎÊı:
-	article_id:ÎÄÕÂid
+POSTå‚æ•°:
+	article_id:æ–‡ç« id
 
-·µ»ØÖµ 
+è¿”å›å€¼ 
 	{"code":0,"gooid":1}
 	code:0 msg:
-	code:1 msg:Î´µÇÂ¼
-	code:2 msg:ÊÕ²ØÎÄÕÂid²»ÄÜÎª¿Õ
-	code:3 msg:Î´µãÔŞ
+	code:1 msg:æœªç™»å½•
+	code:2 msg:æ”¶è—æ–‡ç« idä¸èƒ½ä¸ºç©º
+	code:3 msg:æœªç‚¹èµ
 	
 
 
 
 
-11)µãÔŞ½Ó¿Ú
+11)ç‚¹èµæ¥å£
 	/lecturer/good
-POST²ÎÊı:
-	article_id:ÎÄÕÂid
+POSTå‚æ•°:
+	article_id:æ–‡ç« id
 
-·µ»ØÖµ 
+è¿”å›å€¼ 
 
 	{"code":0,"msg":"\u8bc4\u8bba\u6210\u529f"}
-	code:0 msg:µãÔŞ³É¹¦
-	code:1 msg:Î´µÇÂ¼
-	code:2 msg:ÊÕ²ØÎÄÕÂid²»ÄÜÎª¿Õ
-	code:3 msg:µãÔŞÊ§°Ü
+	code:0 msg:ç‚¹èµæˆåŠŸ
+	code:1 msg:æœªç™»å½•
+	code:2 msg:æ”¶è—æ–‡ç« idä¸èƒ½ä¸ºç©º
+	code:3 msg:ç‚¹èµå¤±è´¥
 
 
-12)È¡ÏûµãÔŞ½Ó¿Ú
+12)å–æ¶ˆç‚¹èµæ¥å£
 	/lecturer/cancelgood?
-POST²ÎÊı:
-	goodid:ÔÚ»ñÈ¡ÊÇ·ñµãÔŞ½Ó¿ÚÖĞ»ñÈ¡µ½µÄid
-	article_id:ÎÄÕÂid
-·µ»ØÖµ 
+POSTå‚æ•°:
+	goodid:åœ¨è·å–æ˜¯å¦ç‚¹èµæ¥å£ä¸­è·å–åˆ°çš„id
+	article_id:æ–‡ç« id
+è¿”å›å€¼ 
 	{"code":0,"msg":"\u8bc4\u8bba\u6210\u529f"}
-	code:0 msg:È¡ÏûµãÔŞ³É¹¦
-	code:1 msg:Î´µÇÂ¼
-	code:2 msg:ÎÄÕÂid²»ÄÜÎª¿Õ
-	code:3 msg:ÊÕ²Øid²»ÄÜÎª¿Õ
+	code:0 msg:å–æ¶ˆç‚¹èµæˆåŠŸ
+	code:1 msg:æœªç™»å½•
+	code:2 msg:æ–‡ç« idä¸èƒ½ä¸ºç©º
+	code:3 msg:æ”¶è—idä¸èƒ½ä¸ºç©º
 
-13£© ÑéÖ¤Âë£º /user/verify
+13ï¼‰ éªŒè¯ç ï¼š /user/verify
 
 
