@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 import http from '../../store/action/http'
 
 export default function Header(){
@@ -14,7 +16,7 @@ export default function Header(){
     ).then((res) => {
         return res.data;
     }).then(data => {
-        console.log(data);
+        // console.log(data);
     })
     return (
         <header id="header">
@@ -22,7 +24,7 @@ export default function Header(){
                 <a>导航</a>
             </nav>
             <h1 className="logo">miaov.com</h1>
-            <a className="user"></a>
+            <Link className="user" to="/login"/>
         </header>
     )
 }
