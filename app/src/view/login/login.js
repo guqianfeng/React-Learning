@@ -16,7 +16,15 @@ function LoginBox(props){
             verify: vcode, 
             username: user,
             password
-        }))
+        })).then(res => {
+            alert(res.msg);
+            setTimeout(() => {
+                if(res.code != 0){
+                    //登录失败
+                    setVcodeSrc("/miaov/user/verify?" + Date.now())
+                }
+            }, 100)
+        })
     }
 
     return (
