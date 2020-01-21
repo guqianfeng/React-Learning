@@ -32,11 +32,21 @@
   right: 0;
 }
 .header-user{
+  display: block;
   padding-right: .1rem;
   text-align: right;
   overflow: hidden;
   font-size: .26rem;
   text-overflow: ellipsis;
+}
+.header-logout-btn{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 1.2rem;
+  text-align: center;
+  font: .3rem/.8rem '宋体';
+  background-color: #323436;
 }
 
 /* .menu a {

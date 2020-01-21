@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import {Link, withRouter} from 'react-router-dom'
 
@@ -6,22 +6,43 @@ import {connect} from 'react-redux'
 
 import {useBack} from '../hook/index'
 
-
-function getUser(path, user){
-    if(path === "/login"){
-        return ""
-    }
-    if(user){
-        return <span className="header-btn-right header-user">{user}</span>
-    }
-    return <Link className="user" to="/login"/>
-}
+import isLogin from '../../store/action/isLogin'
+import logout from '../../store/action/logout'
 
 function Header(props){
     // console.log(props);
     const back = useBack(props.history);
+    const [btnShow, setBtnShow] = useState(false);
     const path = props.location.pathname;
     const {user} = props;
+    useEffect(() => {
+        props.dispatch(isLogin())
+    }, [])
+    function getUser(){
+        if(path === "/login"){
+            return ""
+        }
+        if(user){
+            return (
+                <span className="header-btn-right">
+                    <span 
+                        className="header-user"
+                        onClick={()=>{
+                            setBtnShow(!btnShow);
+                        }}
+                    >{user}</span>
+                    <span 
+                        className="header-logout-btn" 
+                        onClick={() => {
+                            props.dispatch(logout());
+                        }}
+                        style={{display: btnShow ? "block" : "none"}}
+                    >退出</span>
+                </span> 
+            )
+        }
+        return <Link className="user" to="/login"/>
+    }
     return (
         <header id="header">
             <nav className="menu">
@@ -38,7 +59,7 @@ function Header(props){
                 }
             </nav>
             <h1 className="logo">miaov.com</h1>
-            {getUser(path, user)}
+            {getUser()}
         </header>
     )
 }
