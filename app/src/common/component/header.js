@@ -14,7 +14,7 @@ function Header(props){
     const back = useBack(props.history);
     const [btnShow, setBtnShow] = useState(false);
     const path = props.location.pathname;
-    const {user} = props;
+    const {user, changeShow} = props;
     useEffect(() => {
         props.dispatch(isLogin())
     }, [])
@@ -55,7 +55,12 @@ function Header(props){
                     ></a>
                     :
                     // 菜单按钮
-                    <a className="header-btn-left iconfont icon-hycaidan"></a>
+                    <a 
+                        className="header-btn-left iconfont icon-hycaidan"
+                        onClick = {() => {
+                            changeShow();
+                        }}
+                    ></a>
                 }
             </nav>
             <h1 className="logo">miaov.com</h1>

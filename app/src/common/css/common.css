@@ -85,6 +85,7 @@
   padding-top: 1.2rem;
   min-height: 12.82666667rem;
   background-color: #f2f9fc;
+  transition: .5s;
 }
 #footer {
   background: #323436;
