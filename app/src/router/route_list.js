@@ -2,7 +2,7 @@ import React from 'react'
 
 import Index from '../view/index/index'
 import Course from '../view/course/index'
-import Lectruer from '../view/lectruer/index'
+import Lectruer from '../view/lecturer/index'
 import Login from '../view/login/index'
 import Work from '../view/work/index'
 
@@ -25,7 +25,7 @@ const routeList = [
     },
     {
         name: "讲师团队",
-        path: "/lectruer",
+        path: "/lecturer",
         exact: true,
         render(props){
             return <Lectruer {...props}/>
@@ -49,4 +49,25 @@ const routeList = [
     },
 ];
 
-export default routeList;
+const nav = [
+    {
+        name: "首页",
+        path: "/",
+        exact: true,
+        className: 'iconfont icon-home'
+    },
+    {
+        name: "课程",
+        path: "/course",
+        exact: true,
+        className: 'iconfont icon-kecheng'
+    },
+    {
+        name: "讲师团队",
+        path: "/lecturer",
+        exact: true,
+        className: 'iconfont icon-peixunjiangshi'
+    },
+]
+
+export {routeList, nav};

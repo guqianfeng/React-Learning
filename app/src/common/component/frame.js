@@ -27,7 +27,7 @@ export default function Frame(props){
     return (
         <div>
             <Header changeShow={changeShow}/>
-            <Menu/>
+            <Menu menuHide={menuHide}/>
             <div 
                 id="main" 
                 style={{transform: `translateX(${showMenu ? 4.5 : 0}rem)`, height: innerH}}

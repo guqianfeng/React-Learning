@@ -180,6 +180,15 @@
   color: rgba(255, 255, 255, .6);
   vertical-align: middle;
 }
+
+#menu a.active {
+  color: #fff;
+}
+
+#menu a.active:before {
+  color: #fff;
+}
+
 #menu a:first-child {
   border-top: 1px solid rgba(255, 255, 255, .3);
 }
