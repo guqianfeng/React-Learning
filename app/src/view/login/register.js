@@ -6,12 +6,13 @@ import {withRouter} from 'react-router-dom'
 
 import {useBack} from '../../common/hook/index'
 
-import login from '../../store/action/login'
+import register from '../../store/action/register'
 
-function LoginBox(props){
+function RegisterBox(props){
     // console.log(props)
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
+    const [password2, setPassword2] = useState("");
     const [vcode, setVcode] = useState("");
     const [vcodeShow, setVcodeShow] = useState(false);
     const [vcodeSrc, setVcodeSrc] = useState("/miaov/user/verify?" + Date.now());
@@ -20,31 +21,29 @@ function LoginBox(props){
 
     const {setDeg} = props;
 
-    function toLogin(){
-        props.dispatch(login({
+    function toRegister(){
+        //一开始可以做验证这边我就偷懒不写了
+        props.dispatch(register({
             verify: vcode, 
             username: user,
-            password
+            password,
+            repassword: password2
         })).then(res => {
-            alert(res.msg);
+            // console.log(res); //看下控制台信息
+            alert(res.msg)
             setTimeout(() => {
-                if(res.code != 0){
-                    //登录失败
-                    setVcodeSrc("/miaov/user/verify?" + Date.now())
-                }else{
-                    back();
+                if(res.code == 0){
+                    setDeg(0); //注册成功翻转回登录页面
                 }
+                setVcodeSrc("/miaov/user/verify?" + Date.now())
             }, 100)
         })
     }
 
     return (
-        <div className="login_box">
-            <figure className="user_img">
-                <img src={require("../../common/images/user_img.png")} alt="" />
-                <figcaption>如有账号，请直接登录</figcaption>
-            </figure>
-            <div className="login_form">
+        <div className="register_box">
+            <h3>注册账号</h3>
+            <div className="register_form">
                 <p>
                     <input 
                         type="text"  
@@ -62,6 +61,16 @@ function LoginBox(props){
                         value={password}
                         onChange={(e) => {
                             setPassword(e.target.value)
+                        }}                        
+                    />
+                </p>
+                <p>
+                    <input 
+                        type="password"  
+                        placeholder="请确认密码" 
+                        value={password2}
+                        onChange={(e) => {
+                            setPassword2(e.target.value)
                         }}                        
                     />
                 </p>
@@ -91,11 +100,11 @@ function LoginBox(props){
                         ""
                     }
                 </p>
-                <button className="form_btn" onClick={toLogin}>登录</button>
-                <p className="form_tip">没有帐号？<a href="#" onClick={()=>{setDeg(180)}}>立即注册</a></p>
+                <button className="form_btn" onClick={toRegister}>马上注册</button>
+                <p className="form_tip">已有帐号？<a href="#" onClick={()=>{setDeg(0)}}>立即登录</a></p>
             </div>
         </div>        
     )
 }
 
-export default connect(res => res)(withRouter(LoginBox));
+export default connect(res => res)(withRouter(RegisterBox));
