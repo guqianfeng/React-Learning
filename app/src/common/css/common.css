@@ -80,12 +80,19 @@
   background-size: 100% auto;
 }
 #main {
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
   padding-top: 1.2rem;
-  min-height: 12.82666667rem;
+  /* min-height: 12.82666667rem; */ 
+  /* height: 100vh; */
   background-color: #f2f9fc;
-  transition: .5s;
+  transition: .5s transform;
+}
+.pageWrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 #footer {
   background: #323436;

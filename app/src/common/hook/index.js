@@ -7,6 +7,12 @@ function useBack(history){
         }
     }
 }
+
+function useInnerHeight(){
+    return window.innerHeight;
+}
+
 export {
     useBack,
+    useInnerHeight,
 };
