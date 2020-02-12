@@ -7,14 +7,16 @@
   overflow: auto;
 }
 .banner_list {
-  width: 400%;
+  display: flex;
+  float: left;
 }
 .banner_list li {
-  float: left;
-  width: 25%;
+  width: 100vw;
+  flex: none;
 }
 .banner_list img {
   width: 100%;
+  overflow: hidden;
 }
 .banner_nav {
   width: 100%;
