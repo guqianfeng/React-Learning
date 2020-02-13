@@ -22,7 +22,11 @@ export default function Frame(props){
         setShowMenu(false);
     }
     useEffect(() => {
-        pageScroll = new BScroll(wrap.current);
+        pageScroll = new BScroll(wrap.current, {
+            preventDefaultException: {
+                tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/
+            }
+        });
     }, [])
     return (
         <div>
