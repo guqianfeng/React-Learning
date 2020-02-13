@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function Works(){
+function Works(props){
+    console.log(props);
     return (
         <div className="works">
             <h3>学员作品</h3>
@@ -22,3 +23,5 @@ export default function Works(){
         </div>        
     )
 }
+
+export default Works;

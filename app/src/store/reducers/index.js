@@ -1,10 +1,7 @@
 import getUser from './login'
-
-function Index(state = {}, action){
-    return state;
-}
+import works from './works'
 
 export default {
-    Index,
     getUser,
+    works,
 }
