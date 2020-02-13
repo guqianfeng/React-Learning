@@ -3,10 +3,10 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import Tab from '../../common/component/tab'
+import Works from '../../common/component/works'
 import Course from './course'
 import Vip from './vip'
 import Miaov from './miaov'
-
 
 import '../../common/css/index.css'
 
@@ -32,6 +32,7 @@ function Index(props){
             </section>
             <Vip />
             <Miaov />
+            <Works />
         </div>
     )
 }

@@ -222,6 +222,7 @@
   background-size: 100% auto;
 }
 .works {
+  position: relative;
   padding-top: 0.2rem;
 }
 .works h3 {
@@ -230,7 +231,11 @@
   color: #000;
 }
 .works .more {
+  position: absolute;
   display: block;
+  width: 100%;
+  left: 0;
+  bottom: -1.37333333rem;
   font: 0.34666667rem / 1.37333333rem fzlt;
   text-align: center;
 }
@@ -273,6 +278,10 @@
 }
 .works_list .wrork_txt strong {
   float: left;
+  width: 2.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font: 0.34666667rem / 0.73333333rem fzlt;
   text-indent: 0.22666667rem;
 }
