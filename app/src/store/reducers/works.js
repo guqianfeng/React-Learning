@@ -13,7 +13,7 @@ export default function works(state={
             return {
                 ...state,
                 loading: false,
-                data: action.data,
+                data: state.data.concat(action.data), //这里拼接下数据
             }  
         case "LOADEND":
             return {

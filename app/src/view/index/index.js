@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import {connect} from 'react-redux'
 
@@ -8,6 +8,8 @@ import Works from '../../common/component/works'
 import Course from './course'
 import Vip from './vip'
 import Miaov from './miaov'
+
+import getWorks from '../../store/action/getWorks'
 
 import '../../common/css/index.css'
 
@@ -19,7 +21,15 @@ let imgData = [
 ]
 
 function Index(props){
-    // console.log(props)
+    console.log(props);
+    const [page, setPage] = useState(1);
+    let {dispatch} = props;
+    function getWorksData(){
+        dispatch(getWorks(page))
+    }
+    useEffect(() => {
+        getWorksData();
+    }, [])
     return (
         <Frame>
             <div>
@@ -34,7 +44,7 @@ function Index(props){
                 </section>
                 <Vip />
                 <Miaov />
-                <Works />
+                <Works {...props}/>
             </div>
         </Frame>
     )
