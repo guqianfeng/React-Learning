@@ -26,7 +26,7 @@ export default function Frame(props) {
       preventDefaultException: {
         tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/
       },
-      pullUpLoad: pullUp ? { threshold: 200 } : false
+      pullUpLoad: pullUp ? { threshold: 200 } : false,
     });
     pageScroll.on('pullingUp', () => {
       // console.log('上滑加载更多')
