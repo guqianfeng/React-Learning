@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 import Frame from '../../common/component/frame'
 import Tab from '../../common/component/tab'
@@ -14,42 +14,47 @@ import getWorks from '../../store/action/getWorks'
 import '../../common/css/index.css'
 
 let imgData = [
-    require("../../common/images/banner1.jpg"),
-    require("../../common/images/banner2.jpg"),
-    require("../../common/images/banner3.jpg"),
-    require("../../common/images/banner4.jpg"),
+  require("../../common/images/banner1.jpg"),
+  require("../../common/images/banner2.jpg"),
+  require("../../common/images/banner3.jpg"),
+  require("../../common/images/banner4.jpg"),
 ]
 
-function Index(props){
-    console.log(props);
-    const [page, setPage] = useState(1);
-    let {dispatch} = props;
-    function getWorksData(){
-        dispatch(getWorks(page))
-    }
-    useEffect(() => {
-        getWorksData();
-    }, [])
-    return (
-        <Frame>
-            <div>
-                <Tab 
-                    data={imgData}
-                    render={(data) => {
-                        return <img src={data}/>
-                    }}
-                />
-                <section className="index_content"> 
-                    <Course />
-                </section>
-                <Vip />
-                <Miaov />
-                <Works {...props}/>
-            </div>
-        </Frame>
-    )
+function Index(props) {
+  // console.log(props);
+  let [page, setPage] = useState(1);
+  let { dispatch } = props;
+  function getWorksData() {
+    let p = dispatch(getWorks(page))
+    setPage(++page)
+    return p
+  }
+  useEffect(() => {
+    getWorksData();
+  }, [])
+  return (
+    <Frame
+      pullUp={true}
+      getData={getWorksData}
+    >
+      <div>
+        <Tab
+          data={imgData}
+          render={(data) => {
+            return <img src={data} />
+          }}
+        />
+        <section className="index_content">
+          <Course />
+        </section>
+        <Vip />
+        <Miaov />
+        <Works {...props} />
+      </div>
+    </Frame>
+  )
 }
 
 export default connect(props => {
-    return {...props.works};    
+  return { ...props.works };
 })(Index);
