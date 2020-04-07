@@ -2,12 +2,14 @@ import React, { useEffect } from 'react'
 
 import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
-import Tab from '../../common/component/tab'
+import LecturerTab from './tab'
+import Join from './join'
+import Footer from './footer'
 import getLecturers from '../../store/action/getLecturers'
 
 import '../../common/css/teacher.css'
 
-function Lecturer (props) {
+function Lecturer(props) {
   let { data, dispatch } = props;
   let newData = []; //一共拿到9个数据，3个一组
   useEffect(() => {
@@ -21,28 +23,15 @@ function Lecturer (props) {
       data[i + 2]
     ])
   }
-  console.log(newData)
+  // console.log(newData)
   return (
     <Frame>
       <div className="teacher_banner">
         <h2><span>妙味团队</span></h2>
-        { data.length < 1 ? '' : <Tab data={ newData } render={(data) => {
-          return (
-            <ul className="lecturer_list">
-              {
-                data.map(item => {
-                  return (
-                    <li key={item.id}>
-                      <img src={item.icon}/>
-                      <p>{item.title}</p>
-                    </li>
-                  )
-                })
-              }
-            </ul>
-          )
-        }} /> }
+        <LecturerTab data={data} newData={newData} />
       </div>
+      <Join />
+      <Footer />
     </Frame>
   )
 }
