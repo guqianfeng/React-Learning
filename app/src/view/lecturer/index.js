@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
 import LecturerTab from './tab'
 import Join from './join'
 import Footer from './footer'
+import LecturerAlert from './lecturerAlert'
 import getLecturers from '../../store/action/getLecturers'
 
 import '../../common/css/teacher.css'
 
 function Lecturer(props) {
+  const [show, setShow] = useState(false);
+  const [alertData, setAlertData] = useState(null);
   let { data, dispatch } = props;
   let newData = []; //一共拿到9个数据，3个一组
+  function showAlert(data) {
+    setShow(true);
+    setAlertData(data);
+  }
   useEffect(() => {
     dispatch(getLecturers())
   }, [])
@@ -25,14 +32,23 @@ function Lecturer(props) {
   }
   // console.log(newData)
   return (
-    <Frame>
-      <div className="teacher_banner">
-        <h2><span>妙味团队</span></h2>
-        <LecturerTab data={data} newData={newData} />
-      </div>
-      <Join />
-      <Footer />
-    </Frame>
+    <div>
+      <Frame>
+        <div className="teacher_banner">
+          <h2><span>妙味团队</span></h2>
+          <LecturerTab
+            data={data}
+            newData={newData}
+            showAlert={showAlert}
+          />
+        </div>
+        <Join />
+        <Footer />
+      </Frame>
+      {show ? <LecturerAlert
+          data={alertData}
+        /> : ''}
+    </div>
   )
 }
 

@@ -220,10 +220,12 @@
   background: url('../images/dot.png') repeat-x left bottom;
 }
 .elastic_content {
-  padding-top: 0.44rem;
+  margin-top: 0.44rem;
   font: 0.34666667rem / 0.56rem "宋体";
   color: #fff;
   position: relative;
+  height: 6.5rem;
+  overflow: hidden;
 }
 .elastic_content p {
   position: relative;
