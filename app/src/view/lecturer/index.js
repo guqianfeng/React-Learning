@@ -19,6 +19,9 @@ function Lecturer(props) {
     setShow(true);
     setAlertData(data);
   }
+  function hideAlert () {
+    setShow(false)
+  }
   useEffect(() => {
     dispatch(getLecturers())
   }, [])
@@ -47,6 +50,7 @@ function Lecturer(props) {
       </Frame>
       {show ? <LecturerAlert
           data={alertData}
+          hideAlert={hideAlert}
         /> : ''}
     </div>
   )

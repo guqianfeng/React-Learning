@@ -227,6 +227,9 @@
   height: 6.5rem;
   overflow: hidden;
 }
+.elastic_content > div:nth-of-type(1){
+  padding: 0 10px;
+}
 .elastic_content p {
   position: relative;
   padding-left: 0.36rem;
