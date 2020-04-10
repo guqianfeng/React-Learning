@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import Frame from '../../common/component/frame'
 import Tab from '../../common/component/tab'
-import Works from '../../common/component/works'
+import Works from './works'
 import Course from './course'
 import Vip from './vip'
 import Miaov from './miaov'
