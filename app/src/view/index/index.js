@@ -22,11 +22,9 @@ let imgData = [
 
 function Index(props) {
   // console.log(props);
-  let [page, setPage] = useState(1);
   let { dispatch } = props;
   function getWorksData() {
-    let p = dispatch(getWorks(page))
-    setPage(++page)
+    let p = dispatch(getWorks())
     return p
   }
   useEffect(() => {

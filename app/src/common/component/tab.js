@@ -44,17 +44,22 @@ export default function Tab(props){
                 <ul className="banner_list clearfix">
                     {data.map((item, index) => <li key={index}>{render(item)}</li>)}
                 </ul>
-            </div> 
-            <ul className="banner_nav">
-                {data.map((item, index) => {
-                    return (
-                        <li 
-                            key={index} 
-                            className={index===now ? 'active' : ''}>    
-                        </li>
-                    )
-                })}
-            </ul>
+            </div>
+            {
+                data.length < 1 ? '' : (
+                    <ul className="banner_nav">
+                        {data.map((item, index) => {
+                            return (
+                                <li 
+                                    key={index} 
+                                    className={index===now ? 'active' : ''}>    
+                                </li>
+                            )
+                        })}
+                    </ul>
+                )
+            } 
+
         </div>
     )
 }

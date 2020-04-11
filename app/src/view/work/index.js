@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
 import Skeleton from '../../common/component/skeleton'
+import Tab from '../../common/component/tab'
 
 import '../../common/css/miiaov.css'
 
@@ -22,7 +23,16 @@ function Work (props) {
   return (
     <div>
       <Frame>
-        <Skeleton/>
+        {
+          loading ? <Skeleton/> : (
+            <div className="work-details">
+              <Tab
+                data={ data.image_path.map(item => item.path) }
+                render={(src) => <img src={src}/>}
+              />
+            </div>
+          )
+        }
       </Frame>
       <footer className="miiapv_footer">
         回复本帖

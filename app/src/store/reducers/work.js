@@ -1,16 +1,16 @@
 export default function work(state = {
   data: {},
-  loading: false,
+  loading: true,
 }, action) {
   switch (action.type) {
     case "WORK_RESET":
       return {
         data: {},
-        loading: false
+        loading: true
       };
     case "WORK_LOADOVER":
       return {
-        loading: true,
+        loading: false,
         data: action.data
       }
   }

@@ -1,9 +1,10 @@
 import HTTP from './http'
-export default function getWorks(page) {
-  return function (dispatch) {
+export default function getWorks() {
+  return function (dispatch, getState) {
     dispatch({
       type: "LOAD"
     })
+    let { page } = getState().works;
     return HTTP.post(`/lecturer/lists?page=${page}&rows=8`, {
       order: "desc",
       sort: "sort",
