@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
 
 import '../../common/css/miiaov.css'
 
-export default (props) => {
-  // console.log(props)
+import getWork from '../../store/action/getWork'
+
+function Work (props) {
+  let { data, loading, dispatch, match } = props
+  let { id } = match.params
+  console.log(data, loading)
+  useEffect(() => {
+    dispatch(getWork(id))
+    return () => {
+      dispatch({
+        type: 'WORK_RESET'
+      })
+    }
+  }, [])
   return (
     <div>
       <Frame />
@@ -14,3 +27,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default connect(state => ({...(state.work)}))(Work)
