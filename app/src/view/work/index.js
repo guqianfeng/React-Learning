@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
+import Skeleton from '../../common/component/skeleton'
 
 import '../../common/css/miiaov.css'
 
@@ -20,7 +21,9 @@ function Work (props) {
   }, [])
   return (
     <div>
-      <Frame />
+      <Frame>
+        <Skeleton/>
+      </Frame>
       <footer className="miiapv_footer">
         回复本帖
       </footer>
