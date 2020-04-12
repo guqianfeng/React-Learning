@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Frame from '../../common/component/frame'
 import Skeleton from '../../common/component/skeleton'
-import Tab from '../../common/component/tab'
+import Main from './main'
+
 
 import '../../common/css/miiaov.css'
 
@@ -24,14 +25,7 @@ function Work (props) {
     <div>
       <Frame>
         {
-          loading ? <Skeleton/> : (
-            <div className="work-details">
-              <Tab
-                data={ data.image_path.map(item => item.path) }
-                render={(src) => <img src={src}/>}
-              />
-            </div>
-          )
+          loading ? <Skeleton/> : <Main data={data}/>
         }
       </Frame>
       <footer className="miiapv_footer">

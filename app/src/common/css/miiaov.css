@@ -76,6 +76,9 @@
   font-family: fzlt;
   padding-top: 0.42666667rem;
   padding-bottom: 0.46666667rem;
+  font-size: 0.53333333rem;
+  line-height: 0.61333333rem;
+  white-space: pre-line;
 }
 .miiaov_article h3 span {
   display: block;
@@ -94,9 +97,8 @@
   word-break: break-all;
   color: #312f2f;
 }
-.miiaov_txt .miiaov_img {
-  height: 7.46666667rem;
-  background: #f8ad45;
+.miiaov_txt img {
+  max-width: 100%;
   margin: 0.46666667rem 0;
 }
 .miiaov_txt a {
