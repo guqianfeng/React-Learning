@@ -12,7 +12,7 @@ import getWork from '../../store/action/getWork'
 function Work (props) {
   let { data, loading, dispatch, match } = props
   let { id } = match.params
-  console.log(data, loading)
+  // console.log(data, loading)
   useEffect(() => {
     dispatch(getWork(id))
     return () => {

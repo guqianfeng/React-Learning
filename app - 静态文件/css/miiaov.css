@@ -110,13 +110,12 @@
 }
 .miiaov_zan span:nth-of-type(2) {
   float: right;
-  width: 0.36rem;
-  height: 0.32rem;
-  text-indent: -999em;
-  overflow: hidden;
-  background: url('../images/zan_black.png') no-repeat 0 0 / 100% 100%;
-  margin-top: 0.28rem;
   margin-right: 0.26666667rem;
+  font-size: .2rem;
+  color: #312f2f;
+}
+.miiaov_zan span.good {
+  color: #e15672;
 }
 .output {
   padding-top: 0.06666667rem;

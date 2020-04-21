@@ -1,6 +1,7 @@
 import React from 'react'
 import Tab from '../../common/component/tab'
 import Article from './article'
+import Good from './good'
 
 export default function Main (props) {
   let { data } = props;
@@ -14,6 +15,9 @@ export default function Main (props) {
         <Article
           data={ data }
         />
+        <article className="miiaov_comment">
+          <Good goodNumber={data.good} id={data.id}/>
+        </article>
       </div>
     </div>
   )
