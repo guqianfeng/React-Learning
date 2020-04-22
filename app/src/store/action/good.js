@@ -1,14 +1,16 @@
 import HTTP from './http'
+
 function getGood(id) {
   return function (dispatch) {
     return HTTP.post(`/lecturer/getgood`, {
       article_id: id
     })
       .then(res => {
-         console.log(res);
+        // console.log(res);
         if (res.data.code == 0) {
           dispatch({
-            type: "GOOD"
+            type: "GOOD",
+            goodId: res.data.gooid
           })
         } else {
           dispatch({
@@ -19,6 +21,40 @@ function getGood(id) {
   }
 }
 
+function setGood(id) {
+  return function (dispatch) {
+    return HTTP.post(`/lecturer/good`, {
+      article_id: id
+    })
+      .then(res => {
+        // console.log(res);
+        if (res.data.code == '0') {
+          dispatch(getGood(id))
+          return true;
+        }
+      })
+  }
+}
+
+function cancelGood({id, goodid}) {
+  return function (dispatch) {
+    return HTTP.post(`/lecturer/cancelgood`, {
+      article_id: id,
+      goodid
+    })
+      .then(res => {
+        if (res.data.code == '0') {
+          dispatch({
+            type: 'CANCEL_GOOD'
+          })
+          return true;
+        }
+      })
+  }
+}
+
 export {
-  getGood
+  getGood,
+  setGood,
+  cancelGood
 }

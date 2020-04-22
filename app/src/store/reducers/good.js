@@ -1,11 +1,18 @@
-export default function good(state = false, action) {
+export default function good(state = {
+  good: false,
+  goodId: 0
+}, action) {
   switch (action.type) {
     case "GOOD":
-      return true;
-    case "CAMCEL_GOOD":
-      return false;
-    case "RESET_GOOD":
-      return false;
+      return {
+        good: true,
+        goodId: action.goodId
+      };
+    case "CANCEL_GOOD":
+      return {
+        good: false,
+        goodId: 0
+      };
   }
   return state;
 }
