@@ -1,6 +1,9 @@
 import React from 'react'
 
-function MessageList () {
+import { connect } from 'react-redux'
+
+function MessageList (props) {
+  console.log(props)
   return (
     <ul className="comment_list">
       <li>
@@ -18,4 +21,4 @@ function MessageList () {
   )
 }
 
-export default MessageList;
+export default connect(state => state.messageList)(MessageList);

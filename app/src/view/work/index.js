@@ -8,6 +8,7 @@ import Main from './main'
 import '../../common/css/miiaov.css'
 
 import getWork from '../../store/action/getWork'
+import getMessageList from '../../store/action/getMessageList'
 
 function Work (props) {
   let { data, loading, dispatch, match } = props
@@ -15,9 +16,13 @@ function Work (props) {
   // console.log(data, loading)
   useEffect(() => {
     dispatch(getWork(id))
+    dispatch(getMessageList(id))
     return () => {
       dispatch({
         type: 'WORK_RESET'
+      })
+      dispatch({
+        type: 'MESSAGE_RESET'
       })
     }
   }, [])
