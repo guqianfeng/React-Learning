@@ -14,9 +14,12 @@ function Work (props) {
   let { data, loading, dispatch, match } = props
   let { id } = match.params
   // console.log(data, loading)
+  function getMessageData () {
+    return dispatch(getMessageList(id))
+  }
   useEffect(() => {
     dispatch(getWork(id))
-    dispatch(getMessageList(id))
+    getMessageData()
     return () => {
       dispatch({
         type: 'WORK_RESET'
@@ -28,7 +31,10 @@ function Work (props) {
   }, [])
   return (
     <div>
-      <Frame>
+      <Frame
+        pullUp={true}
+        getData={getMessageData}
+      >
         {
           loading ? <Skeleton/> : <Main data={data}/>
         }

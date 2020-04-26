@@ -215,3 +215,27 @@
   font: bold 0.4rem / 1.14666667rem "微软雅黑";
   color: #fff;
 }
+
+.comment_list_info {
+  padding: .5rem 0;
+  font: .4rem / .7rem '宋体';
+  text-align: center;
+  color: #aaa;
+}
+
+.comment_list_more {
+  display: block;
+  font: 0.34666667rem / 1.37333333rem fzlt;
+  text-align: center;
+}
+.comment_list_more::before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 0.48rem;
+  height: 0.48rem;
+  background: url(../images/icon_more.png) no-repeat;
+  background-size: 100% auto;
+  margin-top: 0.44rem;
+  margin-right: 0.18666667rem;
+}
