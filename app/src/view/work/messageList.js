@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
+import ToDate from '../../common/component/toDate';
 
 function MessageListView(props) {
   let { messageList, loadEnd, loading } = props;
@@ -17,7 +18,9 @@ function MessageListView(props) {
                 {item.content}
               </div>
               <div className="comment_footer">
-                <time>17分钟前</time>
+                <time>
+                  <ToDate time={item.create_time}/>
+                </time>
               </div>
             </li>
           ))
