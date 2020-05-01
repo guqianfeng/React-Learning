@@ -223,3 +223,32 @@
   color: #fff;
   z-index: 10;
 }
+
+.message_wrap {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 12;
+  transform: translateY(100%);
+  transition: .5s;
+}
+
+.message_wrap textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  border: 1px solid #aaa;
+  outline: none;
+  font: .25rem / .5rem '宋体';
+  resize: none;
+  overflow: hidden;
+}
+
+.message_wrap .miiapv_footer {
+  position: static;
+}
