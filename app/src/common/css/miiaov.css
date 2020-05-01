@@ -252,3 +252,7 @@
 .message_wrap .miiapv_footer {
   position: static;
 }
+
+.message_wrap .miiapv_footer.put {
+  background-color: #999;
+}

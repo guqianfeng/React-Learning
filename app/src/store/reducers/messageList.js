@@ -29,6 +29,11 @@ export default function messageList(state = {
         loadEnd: false,
         page: 1
       }
+    case "MESSAGE_ADD":
+      return {
+        ...state,
+        messageList: [action.messageList, ...state.messageList],
+      }  
   }
   return state;
 }

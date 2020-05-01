@@ -57,6 +57,7 @@ function Work (props) {
       <Message 
         show={ show }
         setShow = { setShow }
+        id = { id }
       />
     </div>
   )

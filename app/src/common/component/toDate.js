@@ -17,11 +17,11 @@ function ToDate (props) {
   if (disTime < 60 * 1000) {
     return '刚刚'
   } else if (disTime < 60 * 60 * 1000) {
-    return `${disTime / (60 * 1000)}分钟之前`
+    return `${parseInt(disTime / (60 * 1000))}分钟之前`
   } else if (disTime < 24 * 60 * 60 * 1000) {
-    return `${disTime / (60 * 60 * 1000)}小时之前`
+    return `${parseInt(disTime / (60 * 60 * 1000))}小时之前`
   } else if (disTime < 7 * 24 * 60 * 60 * 1000) {
-    return `${disTime / (24 * 60 * 60 * 1000)}天之前`
+    return `${parseInt(disTime / (24 * 60 * 60 * 1000))}天之前`
   } else {
     return time;
   }
