@@ -13,7 +13,7 @@ function Good (props) {
   useEffect(() => {
     dispatch(getGood(id))
   }, [user])
-  console.log(props)
+  // console.log(props)
   return (
     <p className="miiaov_zan">
       <span>有{ goodCount }人觉得很赞</span>

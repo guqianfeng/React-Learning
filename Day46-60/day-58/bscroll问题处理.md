@@ -1,3 +1,11 @@
+# bscroll问题处理
+
+## 练习
+
+* 登录注册页面由于套了bscroll，点击事件失效，可以使用之前的onTouchStart和onTouchEnd处理
+
+* bscroll的其他问题，把pageScroll定义在window下
+```js
 import React, { useState, useEffect, useRef } from 'react';
 import BScroll from 'better-scroll';
 
@@ -64,3 +72,41 @@ export default function Frame(props) {
     </div>
   )
 }
+```
+
+* 作品详情图片加载问题，我们来处理下article.js
+```js
+import React, { useRef, useEffect } from 'react'
+
+function Article (props) {
+  let { data } = props;
+  let wrap = useRef(null);
+  useEffect(() => {
+    let imgs = wrap.current.querySelectorAll('img')
+    // console.log(imgs)
+    imgs.forEach(img => {
+      img.onload = function(){
+        window.pageScroll.refresh();
+      }
+    })
+  }, [data])
+  return (
+    <article className="miiaov_article" ref={wrap}>
+      <h3>{ data.title }</h3>
+      <div 
+        className="miiaov_txt"
+        dangerouslySetInnerHTML={{
+          __html: data.content
+        }}
+      ></div>
+    </article>
+  )
+}
+
+export default Article;
+```
+
+## 目录
+
+* [返回目录](../../README.md)
+* [上一节-发表评论](../day-57/发表评论.md)

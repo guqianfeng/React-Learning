@@ -32,7 +32,7 @@ function MessageListView(props) {
 }
 
 function MessageList(props) {
-  console.log(props)
+  // console.log(props)
   let { messageList } = props;
   return (
     <div className="comment_list_wrap">
