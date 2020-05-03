@@ -88,6 +88,7 @@
     * [day56/发表留言视图建立](./Day46-60/day-56/发表留言视图建立.md)
     * [day57/发表评论](./Day46-60/day-57/发表评论.md)
     * [day58/bscroll问题处理](./Day46-60/day-58/bscroll问题处理.md)
+    * [day59/项目完结小bug修复](./Day46-60/day-59/项目完结小bug修复.md)
     
 
       
