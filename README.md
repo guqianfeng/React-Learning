@@ -17,7 +17,7 @@
 * React Developer Tools
 * redux-DevTools
 
-> 目录
+> 实战目录
 
 * Day01-15
 
@@ -89,6 +89,10 @@
     * [day57/发表评论](./Day46-60/day-57/发表评论.md)
     * [day58/bscroll问题处理](./Day46-60/day-58/bscroll问题处理.md)
     * [day59/项目完结小bug修复](./Day46-60/day-59/项目完结小bug修复.md)
-    
 
-      
+> 深入学习
+
+* 组件化
+    * [跨组件通信](./组件化/ContextTest.js)
+    * [HOC](./组件化/HocTest.js)
+    * [复合组件](./组件化/CompositionTest.js)
