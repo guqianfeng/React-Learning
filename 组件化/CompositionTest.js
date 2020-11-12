@@ -1,28 +1,35 @@
 import React from 'react';
 
+const data = {
+  foo: {
+    title: "foo",
+    content: 'foo'
+  },
+  boo: {
+    title: "boo",
+    content: 'boo'
+  }
+}
+
 function Dialog (props) {
-  const data = {
-    "foo": {title: 'foo-title', content: 'foo-content'},
-    "boo": {title: 'boo-title', content: 'boo-content'},
-  } 
-  const {def, footer} = props.children(data[props.msg])
+  const {def, foot} = props.children(data[props.type])
   return (
     <div style={{border: '1px solid blue'}}>
       {def}
-      {footer ? footer : ""}
+      {foot ? foot : ""}
     </div>
   )
 }
 
-function RadioGroup (props) {
+function RadioGroup ({children, name}) {
   return (
     <div>
       {
-        React.Children.map(props.children, radio => (
-          React.cloneElement(radio, {name: props.name})
+        React.Children.map(children, r => (
+          React.cloneElement(r, {name})
         ))
       }
-    </div>   
+    </div>
   )
 }
 
@@ -37,8 +44,7 @@ function Radio ({children, ...rest}) {
 function CompositionTest(props) {
   return (
     <div>
-      <h1>Composition Test</h1>
-      <Dialog msg="foo">
+      <Dialog type="boo">
         {({title, content}) => ({
           def: (
             <div>
@@ -46,12 +52,14 @@ function CompositionTest(props) {
               <p>{content}</p>
             </div>
           ),
-          footer: (
-            <button onClick={() => {alert('react牛逼')}}>react真爽</button>
+          foot: (
+            <div>
+              <button onClick={() => {alert('react nb')}}>sure</button>
+            </div>
           )
         })}
       </Dialog>
-      <Dialog msg="boo">
+      <Dialog type="foo">
         {({title, content}) => ({
           def: (
             <div>
@@ -66,6 +74,19 @@ function CompositionTest(props) {
         <Radio value="react">react</Radio>
         <Radio value="ng">angular</Radio>
       </RadioGroup>
+      {/* 
+        <div>
+          <label>
+            <input type="radio" value="vue" name="mvvm"/> vue
+          </label>
+          <label>
+            <input type="radio" value="react" name="mvvm"/> react
+          </label>
+          <label>
+            <input type="radio" value="ng" name="mvvm"/> angular
+          </label>
+        </div>
+      */}
     </div>
   );
 }
