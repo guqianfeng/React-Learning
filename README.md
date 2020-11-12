@@ -96,3 +96,4 @@
     * [跨组件通信](./组件化/ContextTest.js)
     * [HOC](./组件化/HocTest.js)
     * [复合组件](./组件化/CompositionTest.js)
+    * [Hooks](./组件化/HooksTest.js)
