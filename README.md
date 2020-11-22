@@ -114,5 +114,18 @@
       )
       ```
     * 这样就可以按需加载了，原理是找到node_modules下的antd目录，es文件夹下引入对应的组件，style文件夹下是css样式
+    * 装饰器配置相关，需要安装`npm install -D @babel/plugin-proposal-decorators`
+      ```js
+      const { override, fixBabelImports, addDecoratorsLegacy } = require('customize-cra')
+
+      module.exports = override(
+        fixBabelImports("import", {
+          libraryName: 'antd',
+          libraryDirectory: 'es',
+          style: 'css'
+        }),
+        addDecoratorsLegacy()
+      )
+      ```
 
 
