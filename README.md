@@ -97,3 +97,6 @@
     * [HOC](./组件化/HocTest.js)
     * [复合组件](./组件化/CompositionTest.js)
     * [Hooks](./组件化/HooksTest.js)
+* antd
+   * 安装react-app-rewired取代react-scripts，可以扩展webpack的配置，类似vue.config.js
+   * 执行指令`npm install react-app-rewired customize-cra babel-plugin-import -D`
