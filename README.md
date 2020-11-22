@@ -100,3 +100,4 @@
 * antd
    * 安装react-app-rewired取代react-scripts，可以扩展webpack的配置，类似vue.config.js
    * 执行指令`npm install react-app-rewired customize-cra babel-plugin-import -D`
+   * 把package.json中的运行指令`react-scripts`改成`react-app-rewired`
