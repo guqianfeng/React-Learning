@@ -101,3 +101,18 @@
    * 安装react-app-rewired取代react-scripts，可以扩展webpack的配置，类似vue.config.js
    * 执行指令`npm install react-app-rewired customize-cra babel-plugin-import -D`
    * 把package.json中的运行指令`react-scripts`改成`react-app-rewired`
+   * 根目录下新建`config-overrides.js`(别问，问就是规范，因为不是这个名字报错信息你也可以看到它找不到这个文件)
+      ```js
+      const { override, fixBabelImports } = require('customize-cra')
+
+      module.exports = override(
+        fixBabelImports("import", {
+          libraryName: 'antd',
+          libraryDirectory: 'es',
+          style: 'css'
+        })
+      )
+      ```
+    * 这样就可以按需加载了，原理是找到node_modules下的antd目录，es文件夹下引入对应的组件，style文件夹下是css样式
+
+
