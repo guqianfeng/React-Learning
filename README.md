@@ -104,6 +104,7 @@
    * React负责逻辑控制，修改数据->vdom
    * ReactDOM类负责渲染，vdom->dom
    * babel-loader转换jsx->vdom，React.createElement()
+   * setState,异步，同一个key出现多次，最后那个起作用
 
 * 组件化
     * [跨组件通信](./组件化/ContextTest.js)
