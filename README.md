@@ -97,7 +97,7 @@
    * env.js可以用来处理环境变量
    * webpack.config.js就是webpack的配置文件
    * 改端口号可以在scripts中的start.js中看到源码，为什么默认端口是3000得到解答
-   * css模块化相关，新建文件名规则为`xxx.module.css`，然后通过import导入，这边导入方式也和普通css不一样，需要`import xxx from 'xxx.module.css'`.在代码中使用可以`className='xxx.xxx'`
+   * css模块化相关，新建文件名规则为`xxx.module.css`，然后通过import导入，这边导入方式也和普通css不一样，需要`import xxx from 'xxx.module.css'`.在代码中使用可以`className={xxx.xxx}`
    
 * 简单的基础
 
