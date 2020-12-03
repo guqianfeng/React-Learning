@@ -59,3 +59,5 @@ export default class ReduxTest extends Component {
 ```
 
 ### react-redux结合中间件
+
+* 安装`yarn add react-redux redux-thunk redux-logger`
