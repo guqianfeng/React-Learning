@@ -10,7 +10,7 @@
   * subscribe  订阅，在回调函数中处理逻辑
 * 在src目录下新建store目录，新建index.js
 ```js
-const {createStore} = require('redux')
+import {createStore} from 'redux'
 
 function CounterReducer (state = 0, action) {
   switch(action.type) {
