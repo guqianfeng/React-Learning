@@ -58,6 +58,8 @@ export default class ReduxTest extends Component {
 
 ```
 
+* 自己封装的redux，请看`gqf-redux`
+
 ### react-redux结合中间件
 * react-redux解决的痛点为
  * 提供Provider，在根组件把store传下去，这样store就可以在任意组件都能取到了
