@@ -13,14 +13,14 @@ function CounterReducer (state = 0, action) {
   }
 }
 
-const loggerGqf = () => dispatch => action => {
+const loggerGqf = () => next => action => {
   console.log('gqf', action.type)
-  return dispatch(action)
+  return next(action)
 }
 
-const loggerTest = () => dispatch => action => {
+const loggerTest = () => next => action => {
   console.log('test', action.type)
-  return dispatch(action)
+  return next(action)
 }
 
 const store = createStore(CounterReducer, applyMiddleware(loggerGqf, loggerTest));
