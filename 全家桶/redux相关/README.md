@@ -60,8 +60,8 @@ export default class ReduxTest extends Component {
 
 ### react-redux结合中间件
 * react-redux解决的痛点为
- * 提供Provider，在根组件把store传下去，这样store就可以在任意组件都能取到了
- * connect函数，提供响应式，便捷各种操作，mapStateToProps,mapDispathToProps
+  * 提供Provider，在根组件把store传下去，这样store就可以在任意组件都能取到了
+  * connect函数，提供响应式，便捷各种操作，mapStateToProps,mapDispathToProps
 * 安装`yarn add react-redux redux-thunk redux-logger`
 * thunk是解决异步的问题
 * logger是打印日志
@@ -160,5 +160,7 @@ class ReduxTest extends Component {
 export default ReduxTest
 
 ```
+
+* [深入理解中间件](https://www.jianshu.com/p/ae7b5a2f78ae)
 
 ### 自己封装的redux及中间件，请看该目录下的gqf-redux及MyReduxTest
