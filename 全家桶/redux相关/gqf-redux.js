@@ -35,7 +35,7 @@ function compose (...fns) {
   if (fns.length === 1) {
     return fns[0];
   }
-  return fns.reduce((left, right) => (...args) => right(left(...args)));
+  return fns.reduce((left, right) => (...args) => left(right(...args)));
 }
 
 export function applyMiddleware (...middlewares) {
