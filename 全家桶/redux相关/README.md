@@ -65,6 +65,16 @@ export default class ReduxTest extends Component {
 * 安装`yarn add react-redux redux-thunk redux-logger`
 * thunk是解决异步的问题
 * logger是打印日志
+  * logger的简单实现
+  ```js
+  // logger函数接受的对象，getState和dispatch其实没用到可以删除的，但每个中间件都会接受这个对象，有这么2个参数
+  function logger ({getState, dispatch}) {
+    return dispatch => action => {
+        console.log(action)
+        return dispatch(action)
+    }
+  }
+  ```
 * src/index.js
 ```js
 import React from 'react';
