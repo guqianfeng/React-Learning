@@ -172,5 +172,6 @@ export default ReduxTest
 ```
 
 * [深入理解中间件](https://www.jianshu.com/p/ae7b5a2f78ae)
+* [redux源码](https://github.com/reduxjs/redux)
 
 ### 自己封装的redux及中间件，请看该目录下的gqf-redux及MyReduxTest
