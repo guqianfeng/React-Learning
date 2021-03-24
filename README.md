@@ -14,7 +14,7 @@
 
 > 浏览器插件
 
-* React Developer Tools
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 * redux-DevTools
 
 > 实战目录
