@@ -149,6 +149,7 @@
 
 * [全家桶](./全家桶/README.md)
 * [umi官网](https://umijs.org/zh-CN)
+* [react动画](https://zh-hans.reactjs.org/docs/faq-styling.html#can-i-do-animations-in-react)
 
       
 
