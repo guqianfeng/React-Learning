@@ -36,6 +36,8 @@ module.exports = override(addDecoratorsLegacy());
 
 ## mobx之旅
 
+### [文档](https://zh.mobx.js.org/README.html)
+
 ### 安装依赖
 
 * `yarn add mobx mobx-react -S`

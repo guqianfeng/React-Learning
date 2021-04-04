@@ -6,7 +6,7 @@ function Li () {
             <div className="view" style={{display: 'block'}}>
                 <input className="toggle" type="checkbox" />
                 <label>213213</label>
-                <a className="destroy"></a>
+                <span className="destroy"></span>
             </div>
             <input className="edit" type="text" value="213213" style={{display: 'none'}} />
         </li>
