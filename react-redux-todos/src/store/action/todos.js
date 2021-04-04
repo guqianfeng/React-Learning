@@ -1,0 +1,6 @@
+export const addTodo = todo => ({type: 'addTodo', payload: {todo}})
+export const changeCompletedById = (completed, id) => ({type: 'changeCompletedById', payload: {completed, id}})
+export const changeAllCompleted = completed => ({type: 'changeAllCompleted', payload: {completed}})
+export const deleteTodoById = id => ({type: 'deleteTodoById', payload: {id}})
+export const clearCompleted = () => ({type: 'clearCompleted'})
+export const editTodoById = (todo, id) => ({type: 'editTodoById', payload: {todo, id}})
