@@ -1,9 +1,14 @@
-import Todos from './components/todos/Todos';
+// import Todos from './components/todos/Todos';
+
+import Counter from "./components/Counter";
+import Theme from "./components/Theme";
 
 function App() {
   return (
     <div className="App">
-      <Todos/>
+      {/* <Todos/> */}
+      <Counter/>
+      <Theme/>
     </div>
   );
 }
