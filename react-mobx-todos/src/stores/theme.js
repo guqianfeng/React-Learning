@@ -12,6 +12,6 @@ export class ThemeStore {
     @action
     setTheme (newTheme) {
         this.theme = newTheme
-        console.warn('setTheme', this.theme)
+        // console.warn('setTheme', this.theme)
     }
 }

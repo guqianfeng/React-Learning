@@ -12,13 +12,13 @@ export class CounterStore {
     @action
     increment () {
         this.count++
-        console.warn('increment', this.count)
+        // console.warn('increment', this.count)
     }
 
     @action
     decrement () {
         this.count--
-        console.warn('decrement', this.count)
+        // console.warn('decrement', this.count)
     }
 
     @computed
