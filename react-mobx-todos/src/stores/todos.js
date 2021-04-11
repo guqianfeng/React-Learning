@@ -27,6 +27,32 @@ export class TodosStore {
     })
   }
 
+  @action
+  changeAllCompleted (completed) {
+    this.todos.forEach(item => {
+      item.completed = completed
+    })
+  }
+
+  @action
+  deleteTodoById (id) {
+    this.todos = this.todos.filter(item => item.id !== id)
+  }
+
+  @action
+  deleteAllCompleted () {
+    this.todos = this.todos.filter(item => !item.completed)
+  }
+
+  @action
+  changeEditById (id, todo) {
+    this.todos.forEach(item => {
+      if (item.id === id) {
+        item.todo = todo
+      }
+    })
+  }
+
   @computed
   get todosLength () {
     return this.todos.length
