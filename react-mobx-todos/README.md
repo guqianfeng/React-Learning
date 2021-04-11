@@ -42,4 +42,4 @@ module.exports = override(addDecoratorsLegacy());
 
 ### 安装依赖
 
-* `yarn add mobx mobx-react -S`
+* `yarn add mobx@5.15.4 mobx-react@6.3.1 -S`注意使用指定的版本，最新版本的写法需要调研，使用的版本是我司现在使用的，配合hook使用美滋滋

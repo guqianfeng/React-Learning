@@ -15,3 +15,8 @@ export const useThemeStore = () => {
     const context = useContext(MobXProviderContext)
     return context.store.themeStore
 }
+
+export const useTodosStore = () => {
+    const context = useContext(MobXProviderContext)
+    return context.store.todosStore
+}
