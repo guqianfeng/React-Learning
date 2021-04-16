@@ -1,4 +1,5 @@
 import React from 'react';
+import HookDemo from './hooks/HookDemo';
 
 // import State from './hooks/State'
 // import Effect from './hooks/Effect'
@@ -8,7 +9,7 @@ import React from 'react';
 // import Callback from './hooks/Callback'
 // import Context from './hooks/Context'
 // import Reducer from './hooks/Reducer'
-import Hook from './hooks/Hook'
+// import Hook from './hooks/Hook'
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <Callback /> */}
       {/* <Context /> */}
       {/* <Reducer/> */}
-      <Hook/>
+      {/* <Hook/> */}
+      <HookDemo/>
     </div>
   );
 }
