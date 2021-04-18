@@ -1,5 +1,6 @@
 import React from 'react';
-import HookDemo from './hooks/HookDemo';
+import WatchDemo from './components/WatchDemo';
+// import HookDemo from './hooks/HookDemo';
 
 // import State from './hooks/State'
 // import Effect from './hooks/Effect'
@@ -23,7 +24,8 @@ function App() {
       {/* <Context /> */}
       {/* <Reducer/> */}
       {/* <Hook/> */}
-      <HookDemo/>
+      {/* <HookDemo/> */}
+      <WatchDemo/>
     </div>
   );
 }
