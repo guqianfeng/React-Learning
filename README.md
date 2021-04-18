@@ -94,7 +94,7 @@
 
 > 深入学习
 
-* cra项目相关
+* [cra](https://create-react-app.dev/docs/adding-typescript/)项目相关
    * `npm run eject`可以看到cra的阵容，多出来2个文件夹config,scripts
    * env.js可以用来处理环境变量
    * webpack.config.js就是webpack的配置文件
