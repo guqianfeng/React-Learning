@@ -156,5 +156,5 @@
 
 ## 慕课网 - jira项目
 
-* [imooc-jira](https://github.com/sindu12jun/imooc-jira)
-* [prettier官网](https://prettier.io/)
+* [imooc-jira github](https://github.com/sindu12jun/imooc-jira)
+* [开发记录](./jira/__dev_record__/README.md)
