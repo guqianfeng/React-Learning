@@ -152,6 +152,7 @@
 * [umi官网](https://umijs.org/zh-CN)
 * [react动画](https://zh-hans.reactjs.org/docs/faq-styling.html#can-i-do-animations-in-react)
 * [react国际化](https://react.i18next.com/)
+* [svg实践方案](https://blog.csdn.net/qq_39953537/article/details/93760188)
 
 ## 慕课网 - jira项目
 
