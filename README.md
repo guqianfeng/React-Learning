@@ -153,6 +153,7 @@
 * [react动画](https://zh-hans.reactjs.org/docs/faq-styling.html#can-i-do-animations-in-react)
 * [react国际化](https://react.i18next.com/)
 
-      
+## 慕课网 - jira项目
 
-
+* [imooc-jira](https://github.com/sindu12jun/imooc-jira)
+* [prettier官网](https://prettier.io/)
