@@ -31,4 +31,5 @@ DELETE /tickets/12 // 删除
   - 举个例子，新增，使用 post 请求，body 中选择 raw 和 json，在输入对应的 json 格式数据，在点击 send
   - crud 可自行体验下
 - 项目中安装依赖`yarn add json-server -D`
-- 根目录下新建文件夹`__json_server_mock__`
+- 根目录下新建文件夹`__json_server_mock__`, 创建一样的`db.json`
+- `package.json`中增加脚本`"json-server": "json-server __json_server_mock__/db.json --watch"`
