@@ -157,4 +157,4 @@
 ## 慕课网 - jira项目
 
 * [imooc-jira github](https://github.com/sindu12jun/imooc-jira)
-* [开发记录](./jira/__jira_dev_record__/README.md)
+* [开发记录](./__jira_dev_record__/README.md)
